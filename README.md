@@ -28,3 +28,9 @@ Learned CSS Grid - display:grid arranges elements in both rows and columns (unli
 
 ## Day 9
 Learned hover effects and transitions - the :hover pseudo-class applies styles only when the mouse is over an element, and transition makes those style changes animate smoothly instead of happening instantly. Added a scale and shadow effect on note cards and a color change on a button, both with smooth transitions.
+
+## Day 10
+Combined everything learned so far into one mini notes app page - header, nav, CSS grid for note cards, hover effects, and a button, all styled together. First page that actually looked like a real website instead of separate practice snippets.
+
+## Day 11
+Started JavaScript - learned variables (let), data types (string, number, boolean), and console.log() for printing output. Used the browser console (F12) to see JS output for the first time, and combined variables into a sentence using string concatenation.
