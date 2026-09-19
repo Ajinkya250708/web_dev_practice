@@ -22,3 +22,9 @@ Learned CSS classes and IDs, and how to write CSS inside a style tag instead of 
 
 ## Day 7
 Learned Flexbox - display:flex arranges child elements in a row instead of the default stacked layout, and gap adds spacing between them. Built a notes dashboard with subject cards (Mathematics, Chemistry, Python) arranged side by side using flexbox.
+
+## Day 8
+Learned CSS Grid - display:grid arranges elements in both rows and columns (unlike flexbox which only handles one direction). grid-template-columns: repeat(3, 1fr) creates 3 equal-width columns, and items automatically wrap to new rows. Built a notes dashboard grid that can scale to any number of notes.
+
+## Day 9
+Learned hover effects and transitions - the :hover pseudo-class applies styles only when the mouse is over an element, and transition makes those style changes animate smoothly instead of happening instantly. Added a scale and shadow effect on note cards and a color change on a button, both with smooth transitions.
