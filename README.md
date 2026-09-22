@@ -34,3 +34,15 @@ Combined everything learned so far into one mini notes app page - header, nav, C
 
 ## Day 11
 Started JavaScript - learned variables (let), data types (string, number, boolean), and console.log() for printing output. Used the browser console (F12) to see JS output for the first time, and combined variables into a sentence using string concatenation.
+
+## Day 12
+Learned if-else conditions and functions. Used if/else if/else to assign grades based on marks, and created a reusable function (greetUser) that takes a parameter and can be called multiple times with different values.
+
+## Day 13
+Learned arrays and for loops. Arrays store multiple values in one variable, accessed by index starting from 0. Used a for loop to go through every item in an array and print each one, instead of writing repetitive code.
+
+## Day 14
+Learned DOM manipulation - using document.getElementById() to grab an HTML element in JavaScript, then changing its content (innerHTML) or style (style.color) when a button is clicked. First time JS changed the actual webpage instead of just the console.
+
+## Day 15
+Combined arrays, loops, and DOM manipulation to dynamically render a list. Instead of hardcoding notes in HTML, stored them in an array and used a loop to generate the HTML automatically - the same pattern real apps use to display data from a database.
