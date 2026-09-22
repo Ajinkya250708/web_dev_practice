@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Day15</title>
+        <style>
+            .note-item{
+            background-color: lightyellow;
+            padding: 10px;
+            margin: 5px;
+            border-radius: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Notes</h1>
+        <div id="notesList"></div>
+        <script>
+            let notes=["Maths","Physics","Chemistry"]
+            function displayNotes(){
+                let container=document.getElementById("notesList");
+                container.innerHTML=""
+                for (let i = 0; i < notes.length; i++) {
+                    container.innerHTML += "<div class='note-item'>" + notes[i] + "</div>";
+                }
+            }
+            displayNotes();
+        </script>
+    </body>
+</html>
