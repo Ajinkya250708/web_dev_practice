@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <title>DAY17</title>
+        <style>
+            .note-item{
+                background-color: lightyellow;
+                padding: 10px;
+                margin: 5px;
+                border-radius: 5px;
+                display: flex;
+                justify-content: space-between;
+            }
+            .delete-btn{
+                background-color: red;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                padding: 2px 8px;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Notes</h1>
+        <input type="text" id="noteInput" placeholder="Enter New Note">
+        <button onclick="addNote()">Add Note</button>
+        <div id="notesList"></div>
+
+        <script>
+            let notes=JSON.parse(localStorage.getItem("myNotes"))||[];
+
+            function saveNotes(){
+                localStorage.setItem("myNotes",JSON.stringify(notes));
+            }
+
+            function displayNotes(){
+                let container=document.getElementById("notesList");
+                container.innerHTML="";
+
+                for (let i=0; i<notes.length;i++){
+                    container.innerHTML+="<div class='note-item'>"+notes[i]+"<button class='delete-btn' onclick='deleteNote("+i+")'>Delete</button></div>";
+                }
+            }
+
+            function addNote(){
+                let input=document.getElementById("noteInput");
+                if (input.value !==""){
+                    notes.push(input.value);
+                    saveNotes();
+                    input.value="";
+                    displayNotes();
+                }
+            }
+
+            function deleteNote(index){
+                notes.splice(index,1);
+                saveNotes();
+                displayNotes();
+            }
+
+            displayNotes()
+
+        </script>
+    </body>
+</html>
