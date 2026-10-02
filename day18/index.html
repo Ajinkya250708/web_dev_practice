@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <title>Day18</title>
+        <style>
+            .note-item{
+                background-color: lightyellow;
+                padding: 10px;
+                margin: 5px;
+                border-radius: 5px;
+            }
+            .delete-btn{
+                background-color: red;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                padding: 2px 8px;
+                cursor: pointer;
+                margin-top: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Notes</h1>
+        <input type="text" id="titleInput" placeholder="Note Title">
+        <textarea id="contentInput" placeholder="Note Content"></textarea>
+        <button onclick="addNote()">Add Note</button>
+        <div id="notesList"></div>
+
+        <script>
+            let notes=JSON.parse(localStorage.getItem("myNotes"))||[];
+
+            function saveNotes(){
+                localStorage.setItem("myNotes",JSON.stringify(notes));
+            }
+
+            function displayNotes(){
+                let container=document.getElementById("notesList");
+                container.innerHTML="";
+
+                for (let i=0; i<notes.length;i++){
+                    container.innerHTML+="<div class='note-item'>"+
+                        "<h3>"+ notes[i].title+"</h3>"+
+                        "<p>"+ notes[i].content+"</p>"+
+                        "<button class='delete-btn' onclick='deleteNote("+i+")'>Delete</button></div>";
+                }
+            }
+
+            function addNote(){
+                let titleInput=document.getElementById("titleInput");
+                let contentInput=document.getElementById("contentInput");
+
+                if (titleInput.value !==""){
+                    let newNote={
+                        title:titleInput.value,
+                        content: contentInput.value,
+                    };
+                    notes.push(newNote);
+                    saveNotes();
+                    titleInput.value="";
+                    contentInput.value="";
+                    displayNotes();
+                }
+            }
+
+            function deleteNote(index){
+                notes.splice(index,1);
+                saveNotes();
+                displayNotes();
+            }
+
+            displayNotes();
+        </script>
+    </body>
+</html>
