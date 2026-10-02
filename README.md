@@ -46,3 +46,9 @@ Learned DOM manipulation - using document.getElementById() to grab an HTML eleme
 
 ## Day 15
 Combined arrays, loops, and DOM manipulation to dynamically render a list. Instead of hardcoding notes in HTML, stored them in an array and used a loop to generate the HTML automatically - the same pattern real apps use to display data from a database.
+
+## Day 16
+Added add and delete functionality to the notes app using array methods - push() to add a new note to the end of the array, and splice() to remove a specific note by its index. Connected an input field and buttons to these functions so the UI updates live.
+
+## Day 17
+Learned localStorage to persist data across page refreshes. Since localStorage only stores strings, used JSON.stringify() to save the array as text and JSON.parse() to convert it back to an array when loading. First time notes survived a page refresh - the app's first real step toward acting like a proper app with saved data.
