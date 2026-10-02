@@ -52,3 +52,6 @@ Added add and delete functionality to the notes app using array methods - push()
 
 ## Day 17
 Learned localStorage to persist data across page refreshes. Since localStorage only stores strings, used JSON.stringify() to save the array as text and JSON.parse() to convert it back to an array when loading. First time notes survived a page refresh - the app's first real step toward acting like a proper app with saved data.
+
+## Day 18
+Learned JavaScript objects to store related data together - each note is now an object with a title and content property instead of a plain string. Updated the notes app to take two inputs (title and content), store them as {title, content} objects in the array, and display them with a heading and paragraph. This is the same data structure real databases use to store records.
