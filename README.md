@@ -1,57 +1,58 @@
 # Web Dev Practice
 
-Daily practice of HTML, CSS, JS as I learn web development, building towards a full-stack notes app.
+Learning web dev day by day, going towards building a full notes app eventually. 1st year student, so pace is slow sometimes because of exams.
 
 ## Day 1
-Learned basic HTML structure - head, title, body tags. Made a simple page with h1 heading, a paragraph with inline CSS color, and a button.
+First ever HTML. Learned head, title, body tags. Made a page with my name and roll number, added a blue paragraph and a button. Basic but felt good to see something render in the browser.
 
 ## Day 2
-Learned lists and links - unordered list (ul), ordered list (ol), list items (li), and anchor tags (a href) for hyperlinks. Also used h2 for subheadings.
+Lists and links today - ul, ol, li, and a href. Made a list of languages I started and accounts I made (LinkedIn, GitHub lol spelled it wrong first time).
 
 ## Day 3
-Learned images, tables, and basic CSS styling. Added an image using the img tag, built a 7-day table using table/tr/th/td, and styled elements with inline CSS (color, background-color, padding) using div.
+Added an image and a 7-day table. Also tried a div with background color. Accidentally wrote alt="Ohh shit" on an image, need to be more careful with that stuff since it's a public repo lol.
 
 ## Day 4
-Learned HTML forms - form, input (text and password types), textarea, label, placeholder, and submit button. Built a login form and a note-creation form as a preview of the notes app's UI.
+Forms today - login form and a note-adding form. Wrote `<forms>` instead of `<form>` at first, didn't work. Also realized password fields need type="password" not type="text", otherwise it shows plain text.
 
 ## Day 5
-Learned semantic HTML tags - header, nav, section, and footer - to structure a page properly instead of using generic divs. Built a basic layout for the notes app homepage with a header, navigation menu, welcome section, and footer, styled with background colors and padding.
+Learned header, nav, section, footer instead of just divs everywhere. Built a basic layout for what the notes app homepage could look like. Links need https:// in front or they break, learned that the hard way.
 
 ## Day 6
-Learned CSS classes and IDs, and how to write CSS inside a style tag instead of inline. Classes (like .box) can be reused on multiple elements, while IDs (like #main-header) are unique to one element. Learned that class/ID names in CSS must exactly match the HTML, or the style silently fails to apply.
+CSS classes and IDs, and writing CSS in a style tag instead of inline. Spent a good 10 min confused why my background color wasn't showing up - turned out I misspelled the id in CSS. Lesson: check spelling first when something doesn't work.
 
 ## Day 7
-Learned Flexbox - display:flex arranges child elements in a row instead of the default stacked layout, and gap adds spacing between them. Built a notes dashboard with subject cards (Mathematics, Chemistry, Python) arranged side by side using flexbox.
+Flexbox. display:flex and gap. Made subject cards (Maths, Chemistry, Python) show side by side instead of stacked. This one clicked pretty fast honestly.
 
 ## Day 8
-Learned CSS Grid - display:grid arranges elements in both rows and columns (unlike flexbox which only handles one direction). grid-template-columns: repeat(3, 1fr) creates 3 equal-width columns, and items automatically wrap to new rows. Built a notes dashboard grid that can scale to any number of notes.
+CSS Grid - similar to flexbox but does rows and columns both. repeat(3, 1fr) for 3 equal columns. Used it for a notes dashboard that can grow to any number of cards.
 
 ## Day 9
-Learned hover effects and transitions - the :hover pseudo-class applies styles only when the mouse is over an element, and transition makes those style changes animate smoothly instead of happening instantly. Added a scale and shadow effect on note cards and a color change on a button, both with smooth transitions.
+Hover effects and transitions. Cards scale up a bit and get a shadow on hover, buttons change color smoothly. Small thing but makes it feel way less static.
 
 ## Day 10
-Combined everything learned so far into one mini notes app page - header, nav, CSS grid for note cards, hover effects, and a button, all styled together. First page that actually looked like a real website instead of separate practice snippets.
+Combined everything into one page - header, nav, grid of cards, button, footer. First time it actually looked like a real website instead of random practice snippets.
 
 ## Day 11
-Started JavaScript - learned variables (let), data types (string, number, boolean), and console.log() for printing output. Used the browser console (F12) to see JS output for the first time, and combined variables into a sentence using string concatenation.
+Started JavaScript. Variables, console.log, basic data types. Checked output in the browser console for the first time - felt like a small milestone.
 
 ## Day 12
-Learned if-else conditions and functions. Used if/else if/else to assign grades based on marks, and created a reusable function (greetUser) that takes a parameter and can be called multiple times with different values.
+if-else and functions. Grading logic based on marks, and a reusable greet function. Starting to feel like actual programming now, not just HTML tags.
 
 ## Day 13
-Learned arrays and for loops. Arrays store multiple values in one variable, accessed by index starting from 0. Used a for loop to go through every item in an array and print each one, instead of writing repetitive code.
+Arrays and for loops. Had a bug where I wrote "note" instead of "notes" in the loop condition, classic typo. Got "not defined" error, fixed it, moved on.
 
 ## Day 14
-Learned DOM manipulation - using document.getElementById() to grab an HTML element in JavaScript, then changing its content (innerHTML) or style (style.color) when a button is clicked. First time JS changed the actual webpage instead of just the console.
+DOM manipulation - getElementById, changing text and color on button click. First time JS actually changed the page itself. Made a bunch of typos here too (oneclick instead of onclick, getElementsById instead of getElementById) but got it working eventually.
 
 ## Day 15
-Combined arrays, loops, and DOM manipulation to dynamically render a list. Instead of hardcoding notes in HTML, stored them in an array and used a loop to generate the HTML automatically - the same pattern real apps use to display data from a database.
+Made notes render from an array using a loop instead of hardcoding them in HTML. This is basically how real apps show data. Took a couple tries to get the function name and class name spelled consistently.
 
 ## Day 16
-Added add and delete functionality to the notes app using array methods - push() to add a new note to the end of the array, and splice() to remove a specific note by its index. Connected an input field and buttons to these functions so the UI updates live.
+Add and delete notes now - push() and splice(). This felt like the actual "app" part finally coming together. Had a messy round of bugs (case mismatches, missing brackets) but got through it.
 
 ## Day 17
-Learned localStorage to persist data across page refreshes. Since localStorage only stores strings, used JSON.stringify() to save the array as text and JSON.parse() to convert it back to an array when loading. First time notes survived a page refresh - the app's first real step toward acting like a proper app with saved data.
+localStorage so notes survive a refresh. Had to use JSON.stringify/parse since localStorage only stores strings. Refreshed the page and the notes were still there - genuinely exciting moment.
 
 ## Day 18
-Learned JavaScript objects to store related data together - each note is now an object with a title and content property instead of a plain string. Updated the notes app to take two inputs (title and content), store them as {title, content} objects in the array, and display them with a heading and paragraph. This is the same data structure real databases use to store records.
+Notes are now objects {title, content} instead of plain text, so each note has a proper title and body. This is basically how data will look later when a real database comes in.
+
