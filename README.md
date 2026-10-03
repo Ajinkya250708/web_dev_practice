@@ -1,66 +1,66 @@
 # Web Dev Practice
 
-Learning web dev day by day, going towards building a full notes app eventually. 1st year student, so pace is slow sometimes because of exams.
+Learning web development step by step. Goal: build a full notes app. I'm in 1st year, so I go slow sometimes because of exams.
 
 ## Day 1
-First ever HTML. Learned head, title, body tags. Made a page with my name and roll number, added a blue paragraph and a button. Basic but felt good to see something render in the browser.
+Wrote my first HTML page. Just text, a button, and my name on screen.
 
 ## Day 2
-Lists and links today - ul, ol, li, and a href. Made a list of languages I started and accounts I made (LinkedIn, GitHub lol spelled it wrong first time).
+Learned how to make lists and clickable links.
 
 ## Day 3
-Added an image and a 7-day table. Also tried a div with background color. Accidentally wrote alt="Ohh shit" on an image, need to be more careful with that stuff since it's a public repo lol.
+Added a picture and a table on the page.
 
 ## Day 4
-Forms today - login form and a note-adding form. Wrote `<forms>` instead of `<form>` at first, didn't work. Also realized password fields need type="password" not type="text", otherwise it shows plain text.
+Made my first form - like a login box and a note box.
 
 ## Day 5
-Learned header, nav, section, footer instead of just divs everywhere. Built a basic layout for what the notes app homepage could look like. Links need https:// in front or they break, learned that the hard way.
+Learned proper page sections - top bar, menu, bottom bar.
 
 ## Day 6
-CSS classes and IDs, and writing CSS in a style tag instead of inline. Spent a good 10 min confused why my background color wasn't showing up - turned out I misspelled the id in CSS. Lesson: check spelling first when something doesn't work.
+Learned how to style multiple things at once using CSS classes. Spent way too long debugging a spelling mistake.
 
 ## Day 7
-Flexbox. display:flex and gap. Made subject cards (Maths, Chemistry, Python) show side by side instead of stacked. This one clicked pretty fast honestly.
+Made cards sit side by side using flexbox. This one was fun.
 
 ## Day 8
-CSS Grid - similar to flexbox but does rows and columns both. repeat(3, 1fr) for 3 equal columns. Used it for a notes dashboard that can grow to any number of cards.
+Made cards arrange in a grid, like a table but for boxes.
 
 ## Day 9
-Hover effects and transitions. Cards scale up a bit and get a shadow on hover, buttons change color smoothly. Small thing but makes it feel way less static.
+Added hover effects - boxes grow a bit when you point at them.
 
 ## Day 10
-Combined everything into one page - header, nav, grid of cards, button, footer. First time it actually looked like a real website instead of random practice snippets.
+Put everything together into one proper looking page for the first time.
 
 ## Day 11
-Started JavaScript. Variables, console.log, basic data types. Checked output in the browser console for the first time - felt like a small milestone.
+Started JavaScript. Just printing stuff to see it work.
 
 ## Day 12
-if-else and functions. Grading logic based on marks, and a reusable greet function. Starting to feel like actual programming now, not just HTML tags.
+Learned if-else and functions - basically how to make the code "decide" things.
 
 ## Day 13
-Arrays and for loops. Had a bug where I wrote "note" instead of "notes" in the loop condition, classic typo. Got "not defined" error, fixed it, moved on.
+Learned lists of data (arrays) and how to loop through them.
 
 ## Day 14
-DOM manipulation - getElementById, changing text and color on button click. First time JS actually changed the page itself. Made a bunch of typos here too (oneclick instead of onclick, getElementsById instead of getElementById) but got it working eventually.
+Made a button that actually changes the page when clicked. Felt cool.
 
 ## Day 15
-Made notes render from an array using a loop instead of hardcoding them in HTML. This is basically how real apps show data. Took a couple tries to get the function name and class name spelled consistently.
+Made notes show up on screen automatically from a list, instead of typing them manually.
 
 ## Day 16
-Add and delete notes now - push() and splice(). This felt like the actual "app" part finally coming together. Had a messy round of bugs (case mismatches, missing brackets) but got through it.
+Added "add note" and "delete note" buttons that actually work.
 
 ## Day 17
-localStorage so notes survive a refresh. Had to use JSON.stringify/parse since localStorage only stores strings. Refreshed the page and the notes were still there - genuinely exciting moment.
+Notes don't disappear anymore after refreshing the page. Big win.
 
 ## Day 18
-Notes are now objects {title, content} instead of plain text, so each note has a proper title and body. This is basically how data will look later when a real database comes in.
+Each note now has a proper title and description, not just plain text.
 
 ## Day 19
-Added edit functionality - now notes can be updated, not just added or deleted. Used an editingIndex variable to track whether we're adding a new note or updating an existing one. Clicking "Edit" fills the input boxes with that note's data, and clicking "Add Note" after that updates the note instead of creating a duplicate. Took a few tries to get all the variable names consistent (notes vs note, editingIndex vs editingindex, content vs context) - naming mismatches are still my most common bug.
+Added an edit button so I can update old notes, not just delete them.
 
 ## Day 20
-Added a search bar to filter notes by title in real time using onkeyup and .includes(). Used toLowerCase() on both the search text and note titles so the search isn't case-sensitive. Hit a tricky bug here - forgot to close the displayNotes function properly with a closing bracket, which made addNote end up nested inside it. Good reminder to close brackets right after opening them instead of coming back to it later.
+Added a search bar to find notes quickly.
 
 ---
-20 days in. The notes app can now add, edit, delete, search, and save data across refreshes - basically a full CRUD app in plain JavaScript. Next step is probably moving this into React.
+20 days done. The notes app can add, edit, delete, search, and save notes properly. Next step: rebuild this using React.
