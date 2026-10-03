@@ -56,3 +56,5 @@ localStorage so notes survive a refresh. Had to use JSON.stringify/parse since l
 ## Day 18
 Notes are now objects {title, content} instead of plain text, so each note has a proper title and body. This is basically how data will look later when a real database comes in.
 
+## Day 19
+Added edit functionality - now notes can be updated, not just added or deleted. Used an editingIndex variable to track whether we're adding a new note or updating an existing one. Clicking "Edit" fills the input boxes with that note's data, and clicking "Add Note" after that updates the note instead of creating a duplicate. Took a few tries to get all the variable names consistent (notes vs note, editingIndex vs editingindex, content vs context) - naming mismatches are still my most common bug.
