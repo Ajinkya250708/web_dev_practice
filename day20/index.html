@@ -1,0 +1,104 @@
+<html>
+    <head>
+        <title>Day20</title>
+        <style>
+            .note-item{
+                background-color: lightyellow;
+                padding: 10px;
+                margin: 5px;
+                border-radius: 5px;
+            }
+            .delete-btn{
+                background-color: red;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                padding: 2px 8px;
+                cursor: pointer;
+                margin-top: 5px;
+            }
+            .edit-btn{
+                background-color: dodgerblue;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                padding: 2px 8px;
+                cursor: pointer;
+                margin-top: 5px;
+                margin-right: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Notes</h1>
+        <input type="text" id="titleInput" placeholder="Note Title">
+        <textarea id="contentInput" placeholder="Note Content"></textarea>
+        <button onclick="addNote()">Add Note</button>
+
+        <br><br>
+        <input type="text" id="searchInput" placeholder="Search notes..." onkeyup="displayNotes()">
+        <div id="notesList"></div>
+
+        <script>
+            let notes=JSON.parse(localStorage.getItem("myNotes"))||[];
+            let editingIndex=-1;
+
+            function saveNotes(){
+                localStorage.setItem("myNotes",JSON.stringify(notes));
+            }
+
+            function displayNotes(){
+                let container=document.getElementById("notesList");
+                let searchText= document.getElementById("searchInput").value.toLowerCase();
+                container.innerHTML="";
+
+                for (let i=0; i<notes.length;i++){
+                    if (notes[i].title.toLowerCase().includes(searchText)) {
+                        container.innerHTML+="<div class='note-item'>"+
+                            "<h3>"+ notes[i].title+"</h3>"+
+                            "<p>"+ notes[i].content+"</p>"+
+                            "<button class='delete-btn' onclick='deleteNote("+i+")'>Delete</button>"+
+                            "<button class='edit-btn' onclick='editNote("+i+")'>Edit</button></div> " ;
+                }
+            }
+        }
+            function addNote(){
+                let titleInput=document.getElementById("titleInput");
+                let contentInput=document.getElementById("contentInput");
+
+                if (titleInput.value !==""){
+                    if(editingIndex===-1){
+                        let newNote={
+                            title:titleInput.value,
+                            content:contentInput.value 
+                        };
+                        notes.push(newNote);
+                    }else{
+                        notes[editingIndex].title=titleInput.value;
+                        notes[editingIndex].content=contentInput.value;
+                        editingIndex=-1;
+                    }
+                    saveNotes();
+                    titleInput.value="";
+                    contentInput.value="";
+                    displayNotes();
+                }
+            }
+            function editNote(index){
+                document.getElementById("titleInput").value=notes[index].title;
+                document.getElementById("contentInput").value=notes[index].content;
+                editingIndex=index;
+            }
+
+            function deleteNote(index){
+                notes.splice(index,1);
+                saveNotes();
+                displayNotes();
+
+            }
+
+            displayNotes();
+
+        </script>
+    </body>
+</html>
