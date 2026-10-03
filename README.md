@@ -58,3 +58,9 @@ Notes are now objects {title, content} instead of plain text, so each note has a
 
 ## Day 19
 Added edit functionality - now notes can be updated, not just added or deleted. Used an editingIndex variable to track whether we're adding a new note or updating an existing one. Clicking "Edit" fills the input boxes with that note's data, and clicking "Add Note" after that updates the note instead of creating a duplicate. Took a few tries to get all the variable names consistent (notes vs note, editingIndex vs editingindex, content vs context) - naming mismatches are still my most common bug.
+
+## Day 20
+Added a search bar to filter notes by title in real time using onkeyup and .includes(). Used toLowerCase() on both the search text and note titles so the search isn't case-sensitive. Hit a tricky bug here - forgot to close the displayNotes function properly with a closing bracket, which made addNote end up nested inside it. Good reminder to close brackets right after opening them instead of coming back to it later.
+
+---
+20 days in. The notes app can now add, edit, delete, search, and save data across refreshes - basically a full CRUD app in plain JavaScript. Next step is probably moving this into React.
