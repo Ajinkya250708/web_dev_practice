@@ -62,5 +62,5 @@ Added an edit button so I can update old notes, not just delete them.
 ## Day 20
 Added a search bar to find notes quickly.
 
----
-20 days done. The notes app can add, edit, delete, search, and save notes properly. Next step: rebuild this using React.
+## Day 21
+Started React. Installed Node, made my first React project with Vite, and got it running on localhost. Lots of new things at once (terminal, setup, npm), so it felt overwhelming, but it works.
